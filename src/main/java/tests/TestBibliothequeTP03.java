@@ -7,8 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import main.java.bo.Emprunt;
-import main.java.bo.Livre;
+import main.java.boBibliotheque.Emprunt;
+import main.java.boBibliotheque.Livre;
 
 public class TestBibliothequeTP03 {
 	

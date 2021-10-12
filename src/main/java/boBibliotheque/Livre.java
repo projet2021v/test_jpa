@@ -1,4 +1,4 @@
-package main.java.bo;
+package main.java.boBibliotheque;
 
 import java.util.ArrayList;
 import java.util.List;

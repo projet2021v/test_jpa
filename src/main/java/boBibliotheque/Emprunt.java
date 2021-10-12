@@ -1,4 +1,4 @@
-package main.java.bo;
+package main.java.boBibliotheque;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class Emprunt {
 	
 	@ManyToOne
 	@JoinColumn(name="ID_CLIENT")
-	private Client client;
+	private ClientBibli client;
 	
 	@ManyToMany(mappedBy="emprunts")
 	private List<Livre> livresEmpruntes;
@@ -66,11 +66,11 @@ public class Emprunt {
 		this.delai = delai;
 	}
 
-	public Client getClient() {
+	public ClientBibli getClient() {
 		return client;
 	}
 
-	public void setClient(Client client) {
+	public void setClient(ClientBibli client) {
 		this.client = client;
 	}
 

@@ -20,9 +20,9 @@ public class TestJpaTP01 {
 			em.getTransaction().begin();
 			System.out.println("connexion établie");
 			
-			em.close();
-			factory.close();
-			System.out.println("connexion fermée");
+//			em.close();
+//			factory.close();
+//			System.out.println("connexion fermée");
 		}
 		catch (Exception e)
 		{

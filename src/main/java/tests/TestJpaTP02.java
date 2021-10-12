@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import main.java.bo.Livre;
+import main.java.boBibliotheque.Livre;
 
 public class TestJpaTP02 {
 
