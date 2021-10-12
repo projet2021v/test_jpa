@@ -2,8 +2,10 @@ package main.java.boBanque;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "livret_a")
 public class LivretA extends Compte {
 	
 	@Column(name = "taux")
@@ -13,6 +15,11 @@ public class LivretA extends Compte {
 		super();
 	}
 
+	public LivretA(String numero, double solde, double taux) {
+		super(numero, solde);
+		this.taux = taux;
+	}
+
 	public double getTaux() {
 		return taux;
 	}
@@ -20,8 +27,5 @@ public class LivretA extends Compte {
 	public void setTaux(double taux) {
 		this.taux = taux;
 	}
-	
-	
-	
 	
 }

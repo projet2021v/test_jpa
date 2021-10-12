@@ -1,10 +1,14 @@
 package main.java.boBanque;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+//@Table(name = "virement")
 @DiscriminatorValue(value = "VIR")
 public class Virement extends Operation {
 	
@@ -13,6 +17,11 @@ public class Virement extends Operation {
 
 	public Virement() {
 		super();
+	}
+
+	public Virement(LocalDateTime date, double montant, String motif, String beneficiaire) {
+		super(date, montant, motif);
+		this.beneficiaire = beneficiaire;
 	}
 
 	public String getBeneficiaire() {

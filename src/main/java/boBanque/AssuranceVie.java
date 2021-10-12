@@ -4,8 +4,10 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "assurance_vie")
 public class AssuranceVie extends Compte {
 	
 	@Column(name = "date_fin")
@@ -16,6 +18,12 @@ public class AssuranceVie extends Compte {
 	
 	public AssuranceVie() {
 		super();
+	}
+
+	public AssuranceVie(String numero, double solde, LocalDate dateFin, double taux) {
+		super(numero, solde);
+		this.dateFin = dateFin;
+		this.taux = taux;
 	}
 
 	public LocalDate getDateFin() {

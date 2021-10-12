@@ -26,7 +26,12 @@ public class Banque {
 	private List<Client> clients;
 
 	public Banque() {
-		clients = new ArrayList<Client>();
+		this.clients = new ArrayList<Client>();
+	}
+
+	public Banque(String nom) {
+		this.nom = nom;
+		this.clients = new ArrayList<Client>();
 	}
 
 	public String getNom() {

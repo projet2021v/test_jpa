@@ -40,6 +40,12 @@ public class Operation {
 	private Compte compte;
 
 	public Operation() {}
+	
+	public Operation(LocalDateTime date, double montant, String motif) {
+		this.date = date;
+		this.montant = montant;
+		this.motif = motif;
+	}
 
 	public LocalDateTime getDate() {
 		return date;

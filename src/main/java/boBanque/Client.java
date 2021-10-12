@@ -49,7 +49,14 @@ public class Client {
 	private List<Compte> comptes;
 
 	public Client() {
-		comptes = new ArrayList<Compte>();
+		this.comptes = new ArrayList<Compte>();
+	}
+	
+	public Client(String nom, String prenom, LocalDate dateNaissance) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateNaissance = dateNaissance;
+		this.comptes = new ArrayList<Compte>();
 	}
 
 	public String getNom() {

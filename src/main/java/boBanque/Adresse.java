@@ -20,6 +20,13 @@ public class Adresse {
 
 	public Adresse() {}
 
+	public Adresse(int numero, String rue, int codePostal, String ville) {
+		this.numero = numero;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+	}
+
 	public int getNumero() {
 		return numero;
 	}

@@ -36,8 +36,15 @@ public class Compte {
 	private List<Operation> operations;
 
 	public Compte() {
-		clients = new ArrayList<Client>();
-		operations = new ArrayList<Operation>();
+		this.clients = new ArrayList<Client>();
+		this.operations = new ArrayList<Operation>();
+	}
+
+	public Compte(String numero, double solde) {
+		this.numero = numero;
+		this.solde = solde;
+		this.clients = new ArrayList<Client>();
+		this.operations = new ArrayList<Operation>();
 	}
 
 	public String getNumero() {
@@ -75,11 +82,5 @@ public class Compte {
 	public void setOperations(List<Operation> operations) {
 		this.operations = operations;
 	}
-	
-	
-	
-	
-	
-	
 
 }
