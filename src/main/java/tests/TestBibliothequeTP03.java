@@ -26,6 +26,10 @@ public class TestBibliothequeTP03 {
 			em.getTransaction().begin();
 			
 			//-----------------------------------TOUS LES LIVRES D'UN EMPRUNT---------
+			//recherche d'un emprunt
+			Emprunt empruntRecherche = em.find(Emprunt.class, id_emprunt);
+			
+			//recherche des livres de cet emprunt
 			Query livresEmpruntes = em.createQuery(
 					"select l from Livre l "
 					+ "inner join l.emprunts e "
@@ -35,7 +39,8 @@ public class TestBibliothequeTP03 {
 			
 			List<Livre> listeLivres = livresEmpruntes.getResultList();
 			
-			//affichage des livres empruntés
+			//affichage de l'emprunt et des livres empruntés
+			System.out.println(empruntRecherche.toString());
 			for(Livre l : listeLivres) {
 				System.out.println(l.toString());
 			}
@@ -43,7 +48,6 @@ public class TestBibliothequeTP03 {
 			System.out.println("------------------------------------------------");
 			
 			//-----------------------------------TOUS LES EMPRUNTS D'UN CLIENT---------
-			//récupération d'un client
 			Query empruntsDunClient = em.createQuery(
 					"select e from Emprunt e "
 					+ "inner join e.client c "
