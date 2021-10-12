@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-//@Table(name = "virement")
 @DiscriminatorValue(value = "VIR")
 public class Virement extends Operation {
 	
