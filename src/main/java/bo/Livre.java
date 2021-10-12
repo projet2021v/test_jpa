@@ -1,10 +1,16 @@
 package main.java.bo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,8 +26,18 @@ public class Livre {
 	
 	@Column(name="AUTEUR")
 	private String auteur;
+	
+	@ManyToMany
+	@JoinTable(
+			name="COMPO",
+			joinColumns=@JoinColumn(name="ID_LIV", referencedColumnName="ID"),
+			inverseJoinColumns=@JoinColumn(name="ID_EMP", referencedColumnName="ID")
+	)
+	private List<Emprunt> emprunts;
 
-	public Livre() {}
+	public Livre() {
+		emprunts = new ArrayList<Emprunt>();
+	}
 
 	public Integer getId() {
 		return id;
@@ -43,6 +59,14 @@ public class Livre {
 		this.auteur = auteur;
 	}
 
+	public List<Emprunt> getEmprunts() {
+		return emprunts;
+	}
+
+	public void setEmprunts(List<Emprunt> emprunts) {
+		this.emprunts = emprunts;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -55,6 +79,10 @@ public class Livre {
 		builder.append("]");
 		return builder.toString();
 	}
+	
+	
+
+	
 
 	
 	
