@@ -1,6 +1,5 @@
-package main.java;
+package main.java.tests;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -10,36 +9,14 @@ import javax.persistence.TypedQuery;
 
 import main.java.bo.Livre;
 
-public class TestJpa {
+public class TestJpaTP02 {
 
 	public static void main(String[] args) {
-		
-		//TP01 - test de connexion
-//		try
-//		{
-//			EntityManagerFactory factory = Persistence.createEntityManagerFactory("pu_essai");
-//			System.out.println("factory créée");
-//			
-//			EntityManager em = factory.createEntityManager();
-//			System.out.println("entity manager créé");
-//			
-//			em.getTransaction().begin();
-//			System.out.println("connexion établie");
-//			
-//			em.close();
-//			factory.close();
-//			System.out.println("connexion fermée");
-//		}
-//		catch (Exception e)
-//		{
-//			e.printStackTrace();
-//		}
-		
 		
 		//TP02 - Entité
 		try
 		{
-			EntityManagerFactory factory = Persistence.createEntityManagerFactory("pu_essai");
+			EntityManagerFactory factory = Persistence.createEntityManagerFactory("pu_test_jpa");
 			EntityManager em = factory.createEntityManager();
 			
 			em.getTransaction().begin();
@@ -138,7 +115,6 @@ public class TestJpa {
 		{
 			e.printStackTrace();
 		}
-		
 
 	}
 
