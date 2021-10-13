@@ -21,17 +21,17 @@ public class Livre {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name="TITRE")
+	@Column(name="titre")
 	private String titre;
 	
-	@Column(name="AUTEUR")
+	@Column(name="auteur")
 	private String auteur;
 	
 	@ManyToMany
 	@JoinTable(
-			name="COMPO",
-			joinColumns=@JoinColumn(name="ID_LIV", referencedColumnName="ID"),
-			inverseJoinColumns=@JoinColumn(name="ID_EMP", referencedColumnName="ID")
+			name="compo",
+			joinColumns=@JoinColumn(name="id_liv", referencedColumnName="id"),
+			inverseJoinColumns=@JoinColumn(name="id_emp", referencedColumnName="id")
 	)
 	private List<Emprunt> emprunts;
 

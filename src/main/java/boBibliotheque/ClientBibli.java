@@ -19,10 +19,10 @@ public class ClientBibli {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name="NOM")
+	@Column(name="nom")
 	private String nom;
 	
-	@Column(name="PRENOM")
+	@Column(name="prenom")
 	private String prenom;
 	
 	@OneToMany(mappedBy="client")

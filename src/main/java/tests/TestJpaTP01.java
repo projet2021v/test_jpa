@@ -3,7 +3,6 @@ package main.java.tests;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceUnit;
 
 public class TestJpaTP01 {
 
@@ -21,9 +20,9 @@ public class TestJpaTP01 {
 			em.getTransaction().begin();
 			System.out.println("connexion établie");
 			
-//			em.close();
-//			factory.close();
-//			System.out.println("connexion fermée");
+			em.close();
+			factory.close();
+			System.out.println("connexion fermée");
 		}
 		catch (Exception e)
 		{

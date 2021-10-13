@@ -22,17 +22,17 @@ public class Emprunt {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name="DATE_DEBUT")
+	@Column(name="date_debut")
 	private Date date_debut;
 	
-	@Column(name="DATE_FIN")
+	@Column(name="date_fin")
 	private Date date_fin;
 	
-	@Column(name="DELAI")
+	@Column(name="delai")
 	private Integer delai;
 	
 	@ManyToOne
-	@JoinColumn(name="ID_CLIENT")
+	@JoinColumn(name="id_client")
 	private ClientBibli client;
 	
 	@ManyToMany(mappedBy="emprunts")
